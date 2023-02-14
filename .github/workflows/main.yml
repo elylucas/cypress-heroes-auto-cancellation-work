@@ -14,13 +14,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install dependencies & Build
-        uses: cypress-io/github-action@b80418579b5d0736b8d0f81c524800dc46a62942
+        uses: cypress-io/github-action@0aa6f5bca7b215abae80220d2c5b3bf3f1b67c5b
         with:
           # just build and perform install
           build: npm run build
           runTests: false
       - name: CT Tests
-        uses: cypress-io/github-action@b80418579b5d0736b8d0f81c524800dc46a62942 # use the explicit version number
+        uses: cypress-io/github-action@0aa6f5bca7b215abae80220d2c5b3bf3f1b67c5b # use the explicit version number
         env:
           DEBUG: '@cypress/github-action'
         with:
@@ -28,20 +28,20 @@ jobs:
           component: true
           # command: npm run test:ct:ci:client-react
           record: true
-          auto-cancel-after-failures: 2
+          auto-cancel-after-failures: 1
           working-directory: ./client-react
           command-prefix: ' '
       - name: Start Client & Server
         run: npm run start:ci:react &
       - name: E2E Tests
-        uses: cypress-io/github-action@b80418579b5d0736b8d0f81c524800dc46a62942 # use the explicit version number
+        uses: cypress-io/github-action@0aa6f5bca7b215abae80220d2c5b3bf3f1b67c5b # use the explicit version number
         with:
           install: false
           command: npm run test:e2e:ci:client-react
           record: true
           wait-on: 'http://localhost:3000, http://localhost:3001/heroes'      
       - name: API Tests
-        uses: cypress-io/github-action@b80418579b5d0736b8d0f81c524800dc46a62942 # use the explicit version number
+        uses: cypress-io/github-action@0aa6f5bca7b215abae80220d2c5b3bf3f1b67c5b # use the explicit version number
         with:
           install: false
           command: npm run test:api:ci
