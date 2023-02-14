@@ -23,7 +23,7 @@
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
     "autoprefixer": "^10.4.13",
-    "cypress": "^12.5.0",
+    "cypress": "https://cdn.cypress.io/beta/npm/12.6.0/darwin-arm64/develop-06187121b15e24e3835305e3ce38615a5a2f37b4/cypress.tgz",
     "postcss": "^8.4.21",
     "sass": "^1.57.1",
     "tailwindcss": "^3.2.4",

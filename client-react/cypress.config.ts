@@ -2,7 +2,7 @@ import { defineConfig } from "cypress";
 import { createHero, deleteHero } from './cypress/support/data';
 
 export default defineConfig({
-  projectId: 'asunfc',
+  projectId: 'x2youg',
   e2e: {
     baseUrl: 'http://localhost:3000',
     setupNodeEvents(on, config) {
